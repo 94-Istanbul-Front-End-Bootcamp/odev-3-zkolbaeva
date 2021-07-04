@@ -1,5 +1,6 @@
 
-function validateForm(){
+function validateForm(event){
+    event.preventDefault() //prevent from submitting the form!!!!!
     // username için
     const username = document.getElementById('username').value;
     // şifre için
@@ -19,11 +20,10 @@ function validateForm(){
     if (usernameErrMsg) {
 
         const usernameErrMsgEl = document.querySelector('.username .error-message');
-        console.log(usernameErrMsgEl)
         usernameErrMsgEl.innerHTML = usernameErrMsg;
     }
 
-    if (mailErrMsg) {
+    if (emailErrMsg) {
         // select the email form field message element
         const emailErrMsgEl = document.querySelector('.email .error-message');
         // show email error message to user

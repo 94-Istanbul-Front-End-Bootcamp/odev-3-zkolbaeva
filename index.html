@@ -15,17 +15,17 @@
         <div class="form-body">
             <div class="username">
                 <label for="username">Kullanıcı Adı :</label>
-                <input type="text" id="username" placeholder="Kullanıcı Adı" required>
+                <input type="text" id="username" placeholder="Kullanıcı Adı" >
                 <div class="error-message"></div>
             </div>
             <div class="password" >
                 <label for="password">Parola :</label>
-                <input type="password" id="password" placeholder="Şifre" minlength="8" required>
+                <input type="password" id="password" placeholder="Şifre" minlength="8">
                 <div class="error-message"></div>
             </div>
             <div class="email" >
                 <label for="email">E-Mail :</label>
-                <input type="email" id="email" placeholder="E-mail" required>
+                <input type="email" id="email" placeholder="E-mail">
                 <div class="error-message"></div>
             </div>
             <div>
@@ -33,7 +33,7 @@
                 <div class="error-message"></div>
             </div>
             <div>
-                <button onclick="validateForm()" type="submit">Gönder</button>
+                <button onclick="validateForm(event)" type="submit">Gönder</button>
             </div>
         </div>
     </form>
