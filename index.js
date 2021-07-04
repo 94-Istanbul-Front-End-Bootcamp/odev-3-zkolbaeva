@@ -7,13 +7,15 @@ function validateForm(event){
     const password = document.getElementById('password').value;
     // email için
     const email = document.getElementById('email').value;
+    //
+    let checkbox =document.getElementById('cb')
 
-    
     const usernameErrMsg = validateUserName(username)
     const passwordErrMsg = validatePassword(password,8)
     const emailErrMsg = validateEmail(email) 
-    
-    console.log(emailErrMsg)
+    const cbErrMsg = validateCheckbox(checkbox) 
+
+    console.log(username)
     console.log(password)
     console.log(email)
 
@@ -35,6 +37,11 @@ function validateForm(event){
         const passwordErrMsgEl = document.querySelector('.password .error-message');
         passwordErrMsgEl.innerHTML = passwordErrMsg;
     }
+    if (cbErrMsg) {
+
+      const cbErrMsgEl = document.querySelector('.cb .error-message');
+      cbErrMsgEl.innerHTML = cbErrMsg;
+  }
 }
 
 function validateUserName(username) {
@@ -54,7 +61,7 @@ function validatePassword(password, minlength) {
       return 'Please use at least one capital letter.';
     }
   
-    const hasNumber = /\d/g;
+    const hasNumber = /\d/;
     if (!hasNumber.test(password)) {
       return 'Please use at least one number.';
     }
@@ -72,5 +79,8 @@ function validateEmail(email) {
   
     return '';
 }
-
+function validateCheckbox(checkbox) {
+    if (!checkbox.checked) return 'Checkbox is required';
+    return '';
+}
 //validateForm();
