@@ -10,6 +10,13 @@ Valid ise
 
 ![alt text](/form-valid.png)
 
+## Final sayfa yapısı
+Valid değil ise
+![alt text](/not-valid.png)
+
+Valid ise
+
+![alt text](/valid.png)
 
 ## Kurallar
 1- Kullanıcı Adı, Şifre ve Email boş olduğunda hata verecek.
