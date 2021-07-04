@@ -20,28 +20,42 @@ function validateForm(event){
     console.log(email)
 
     if (usernameErrMsg) {
-
-        const usernameErrMsgEl = document.querySelector('.username .error-message');
-        usernameErrMsgEl.innerHTML = usernameErrMsg;
+      const usernameErrMsgEl = document.querySelector('.username .error-message');
+      usernameErrMsgEl.innerHTML = usernameErrMsg;
+    }
+    else{
+      const usernameErrMsgEl = document.querySelector('.username .error-message');
+      usernameErrMsgEl.innerHTML = '';
     }
 
     if (emailErrMsg) {
-        // select the email form field message element
-        const emailErrMsgEl = document.querySelector('.email .error-message');
-        // show email error message to user
-        emailErrMsgEl.innerHTML = emailErrMsg;
+      // select the email form field message element
+      const emailErrMsgEl = document.querySelector('.email .error-message');
+      // show email error message to user
+      emailErrMsgEl.innerHTML = emailErrMsg;
+    }
+    else{
+      const emailErrMsgEl = document.querySelector('.email .error-message');
+      emailErrMsgEl.innerHTML = '';
     }
 
     if (passwordErrMsg) {
-
-        const passwordErrMsgEl = document.querySelector('.password .error-message');
-        passwordErrMsgEl.innerHTML = passwordErrMsg;
+      const passwordErrMsgEl = document.querySelector('.password .error-message');
+      passwordErrMsgEl.innerHTML = passwordErrMsg;
     }
-    if (cbErrMsg) {
+    else{
+      const passwordErrMsgEl = document.querySelector('.password .error-message');
+      passwordErrMsgEl.innerHTML = '';
+    }
 
+    if (cbErrMsg) {
       const cbErrMsgEl = document.querySelector('.cb .error-message');
       cbErrMsgEl.innerHTML = cbErrMsg;
-  }
+    }
+    else{
+      const cbErrMsgEl = document.querySelector('.cb .error-message');
+      cbErrMsgEl.innerHTML = '';
+    }
 }
 
 function validateUserName(username) {
